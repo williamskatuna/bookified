@@ -45,7 +45,7 @@ export default function Navbar(){
                     </Link>               
                     
                 ))}
-               
+                
 
 
             </div>
@@ -53,7 +53,7 @@ export default function Navbar(){
             
             }
 
-             <UserButton afterSignOutUrl="/"/>
+            <UserButton afterSignOutUrl="/"/>
 
         </nav>
     )
