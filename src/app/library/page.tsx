@@ -4,6 +4,8 @@ import { connectDB } from "@/lib/mongodb";
 import {Book} from "@/models/Book";
 import {BookOpen, Plus} from 'lucide-react'
 import Link from "next/link";
+import UploadModal from '@/components/UploadModal';
+
 
 export default async function LibraryPage() {
 
@@ -98,13 +100,9 @@ return (
                                                     upload your first PDF to get started
                                                 </p>
 
-                                                <button className="bg-[#6B3A2A] text-[#F5EFE4] px-6
-                                                                    py-3 rounded-xl font-medium text-sm
-                                                                    flex items-center gap-2
-                                                                    hover:bg-[#4a2518] transition-all">
-                                                <Plus size={16}/>
-                                                Upload your first book
-                                                </button>
+                                                <div>
+                                                    <UploadModal/>
+                                                </div>
                                     </div>
                 ) : (
 
@@ -137,7 +135,9 @@ return (
                                                     </span>                            
                                     </div>                                                             
                                     </div>
-                                </Link>                                               
+                                </Link>
+                                
+                                
                         ))}
                                 </div>
                     )}
